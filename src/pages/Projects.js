@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+console.log("runningProjects");
 function Projects(props) {
   // create state to hold projects
   const [projects, setProjects] = useState(null);
@@ -10,6 +10,7 @@ function Projects(props) {
     const response = await fetch(props.URL + "projects");
     // turn response into javascript object
     const data = await response.json();
+    console.log(data);
     // set the projects state to the data
     setProjects(data);
   };
